@@ -1,0 +1,89 @@
+.pagination {
+	margin-top: 20px
+}
+.pagination p {
+	font-size: .6em;
+	color: #2E4057;
+}
+.co-pagination li {
+  /* hide numbers on small devices */
+  display: none	
+}
+.co-pagination li.co-button {
+  /* make sure prev next buttons are visible */
+  display: inline-block
+}
+.co-pagination a, .co-pagination span {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* use padding and font-size to change buttons size */
+  padding: .6em .8em;
+  font-size: .6em
+}
+.co-pagination a {
+  border: 1px solid #e6e6e6;
+  border-radius: 0.25em;
+  color: #2E4057;
+  text-decoration: none
+}
+.co-pagination a:hover,
+.co-pagination span {
+  background-color: #f2f2f2
+}
+.co-pagination a:active {
+  /* click effect */
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9)
+}
+
+.co-pagination .button:first-of-type a::before {
+  content: '\00ab  '
+}
+.co-pagination .button:last-of-type a::after {
+  content: ' \00bb'
+}
+
+.co-pagination.co-no-space {
+  width: auto;
+  max-width: none;
+  display: inline-block;
+  border-radius: 0.25em;
+  border: 1px solid #e6e6e6
+}
+.co-pagination.co-no-space:after {
+  content: "";
+  display: table;
+  clear: both
+}
+.co-pagination.co-no-space li {
+  margin: 0;
+  float: left;
+  border-right: 1px solid #e6e6e6
+}
+.co-pagination.co-no-space li:last-of-type {
+  border-right: none
+}
+.co-pagination.co-no-space a, .co-pagination.co-no-space span {
+  float: left;
+  border-radius: 0;
+  padding: .8em 1em;
+  border: none
+}
+.co-pagination.co-no-space li:first-of-type a {
+  border-radius: 0.25em 0 0 0.25em
+}
+.co-pagination.co-no-space li:last-of-type a {
+  border-radius: 0 0.25em 0.25em 0
+}
+
+@media only screen and (min-width: 1180px) {
+  .co-pagination li {
+    display: inline-block
+  }		
+}
